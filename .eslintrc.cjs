@@ -25,5 +25,6 @@ module.exports = {
         fixStyle: 'inline-type-imports',
       },
     ],
+    'no-console': 'warn'
   },
 };
