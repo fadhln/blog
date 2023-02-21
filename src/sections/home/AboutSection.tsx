@@ -7,7 +7,7 @@ import TagAccent from './tagAccent';
 const AboutSection = () => {
   return (
     <section
-      className="h-[75vh] flex flex-col items-center justify-center relative -z-0"
+      className="h-[90vh] flex flex-col items-center justify-center relative -z-0"
       id="about"
     >
       <div className="absolute -top-10 -left-5">
