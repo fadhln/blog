@@ -1,12 +1,13 @@
-import useTheme from '@/hooks/useTheme';
+import themeAtom from '@/atom/themeAtom';
 import '@/styles/globals.css';
 import { api } from '@/utils/api';
 import cx from '@/utils/cx';
 import { useEffect, useState } from 'react';
+import { useAtom } from 'jotai';
 import { type AppType } from 'next/app';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  const { theme } = useTheme();
+  const [theme] = useAtom(themeAtom);
   const [defaultTheme, setDefaultTheme] = useState('light');
   const handleSetTheme = (e: MediaQueryListEvent) => {
     setDefaultTheme(e.matches ? 'dark' : 'light');
