@@ -1,10 +1,12 @@
 import themeAtom, { type Theme } from '@/atom/themeAtom';
+
 import React, { useState } from 'react';
 import {
   HiOutlineComputerDesktop,
   HiOutlineSun,
   HiOutlineMoon,
 } from 'react-icons/hi2';
+
 import * as Menu from '@radix-ui/react-dropdown-menu';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useAtom } from 'jotai';
@@ -17,7 +19,7 @@ const ThemeButton = () => {
   return (
     <>
       <Menu.Root open={open} onOpenChange={(v) => setOpen(v)}>
-        <Menu.Trigger className='aspect-square p-2 border rounded-full border-warm-gray-500 border-opacity-40 hover:border-opacity-100 transition-all'>
+        <Menu.Trigger className="aspect-square p-2 border rounded-full border-warm-gray-500 border-opacity-40 hover:border-opacity-100 transition-all">
           {theme === 'light' ? (
             <HiOutlineSun />
           ) : theme === 'dark' ? (

@@ -2,7 +2,9 @@ import themeAtom from '@/atom/themeAtom';
 import '@/styles/globals.css';
 import { api } from '@/utils/api';
 import cx from '@/utils/cx';
+
 import { useEffect, useState } from 'react';
+
 import { useAtom } from 'jotai';
 import { type AppType } from 'next/app';
 
