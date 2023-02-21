@@ -13,7 +13,7 @@ const Navbar = () => {
   const sm = useMediaQuery('sm');
 
   return (
-    <nav className="w-full backdrop-blur-sm bg-warm-gray-100 dark:bg-warm-gray-800 border-b-[1px] border-warm-gray-300 dark:border-warm-gray-700 transition-colors">
+    <nav className="fixed top-0 z-20 bg-opacity-40 dark:bg-opacity-50 w-full backdrop-blur-sm bg-warm-gray-100 dark:bg-warm-gray-800 border-b-[1px] border-warm-gray-300 dark:border-warm-gray-700">
       <div className="flex items-center justify-between container mx-auto p-4">
         <Link className="max-w-[3rem] max-h-[3rem]" href="/">
           <Icon />
