@@ -32,7 +32,7 @@ const ThemeButton = () => {
           {open && (
             <Menu.Content
               forceMount
-              className="bg-warm-gray-50 shadow-md dark:bg-warm-gray-700 overflow-hidden p-1 rounded-lg mt-2"
+              className="bg-warm-gray-50 shadow-md mr-2 dark:bg-warm-gray-700 overflow-hidden p-1 rounded-lg mt-2"
             >
               <motion.div
                 initial={{ height: 0 }}
