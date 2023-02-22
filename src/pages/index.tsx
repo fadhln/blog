@@ -1,6 +1,7 @@
 import BlurBlob from '@/components/blurBlob';
 import Navbar from '@/components/navbar';
 import AboutSection from '@/sections/home/AboutSection';
+import ProjectSection from '@/sections/home/ProjectSection';
 import TechStackSection from '@/sections/home/TechStackSection';
 
 import { type NextPage } from 'next';
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Made by Muhammad Fadhlan" />
       </Head>
       <Navbar />
-      <main className="min-h-screen pt-[4.5rem]">
+      <main className="min-h-screen pt-[4.5rem] pb-10 relative">
         <div className="relative">
           <div className="absolute z-0 -translate-y-[60%] left-[50%] -translate-x-1/2 max-w-[90vw] overflow-hidden flex item-center justify-center">
             <BlurBlob
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         </div>
         <AboutSection />
         <TechStackSection />
+        <ProjectSection />
       </main>
     </>
   );
