@@ -69,5 +69,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-gradient')],
+  plugins: [
+    require('tailwindcss-gradient'),
+    require('@tailwindcss/line-clamp'),
+  ],
 };

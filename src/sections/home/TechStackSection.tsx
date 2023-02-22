@@ -45,9 +45,8 @@ const TechStackSection = () => {
       <motion.div
         variants={{
           offscreen: {
-            y: -10,
+            y: 10,
             opacity: 0,
-            rotateX: 20,
             transition: {
               type: 'keyframes',
               duration: 0.8,
@@ -56,10 +55,9 @@ const TechStackSection = () => {
           onscreen: {
             y: 0,
             opacity: 100,
-            rotateX: 0,
             transition: {
               type: 'keyframes',
-              duration: 0.2,
+              duration: 0.5,
             },
           },
         }}
