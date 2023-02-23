@@ -1,4 +1,5 @@
 import BlurBlob from '@/components/blurBlob';
+import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import AboutSection from '@/sections/home/About/AboutSection';
 import ContactSection from '@/sections/home/Contact/ContactSection';
@@ -42,7 +43,16 @@ const Home: NextPage = () => {
           />
         </div>
         <ContactSection />
+        <div className="relative">
+          <div className="absolute z-0 left-[50%] -translate-x-1/2 max-w-[90vw] overflow-hidden flex item-center justify-center">
+            <BlurBlob
+              className="w-[150vw]"
+              pathClassName="fill-warm-gray-300 dark:fill-warm-gray-700"
+            />
+          </div>
+        </div>
       </main>
+      <Footer />
     </>
   );
 };
