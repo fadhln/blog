@@ -28,8 +28,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <div className={cx(theme === 'default' ? defaultTheme : theme)}>
-      <div className="bg-warm-gray-50 dark:bg-warm-gray-900 text-warm-gray-900 dark:text-warm-gray-50 transition-all">
+    <div className={cx(theme === 'default' ? defaultTheme : theme)} id="root">
+      <div className="bg-warm-gray-50 dark:bg-warm-gray-900 text-warm-gray-900 dark:text-warm-gray-50 max-w-screen overflow-hidden">
         <Component {...pageProps} />
       </div>
     </div>
