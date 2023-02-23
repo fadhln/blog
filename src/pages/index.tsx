@@ -1,8 +1,9 @@
 import BlurBlob from '@/components/blurBlob';
 import Navbar from '@/components/navbar';
-import AboutSection from '@/sections/home/AboutSection';
-import ProjectSection from '@/sections/home/ProjectSection';
-import TechStackSection from '@/sections/home/TechStackSection';
+import AboutSection from '@/sections/home/About/AboutSection';
+import ExperienceSection from '@/sections/home/Experience/ExperienceSection';
+import ProjectSection from '@/sections/home/Project/ProjectSection';
+import TechStackSection from '@/sections/home/TechStack/TechStackSection';
 
 import { type NextPage } from 'next';
 import Head from 'next/head';
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <AboutSection />
         <TechStackSection />
         <ProjectSection />
+        <ExperienceSection />
       </main>
     </>
   );

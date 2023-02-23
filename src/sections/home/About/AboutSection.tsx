@@ -2,7 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-import TagAccent from './tagAccent';
+import TagAccent from './components/tagAccent';
 
 const AboutSection = () => {
   return (
