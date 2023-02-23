@@ -9,7 +9,7 @@ import ExperienceItem from './components/experienceItem';
 
 const ExperienceSection = () => {
   return (
-    <section className="mx-auto container mt-56 px-3 relative">
+    <section className="mx-auto container mt-56 px-3 relative z-20">
       <SectionHeading name={'experience'} />
       <p className="mt-24 max-w-lg">
         I love building stuff. I have been building tech solutions that ranging

@@ -1,6 +1,7 @@
 import BlurBlob from '@/components/blurBlob';
 import Navbar from '@/components/navbar';
 import AboutSection from '@/sections/home/About/AboutSection';
+import ContactSection from '@/sections/home/Contact/ContactSection';
 import ExperienceSection from '@/sections/home/Experience/ExperienceSection';
 import ProjectSection from '@/sections/home/Project/ProjectSection';
 import TechStackSection from '@/sections/home/TechStack/TechStackSection';
@@ -30,16 +31,17 @@ const Home: NextPage = () => {
         <TechStackSection />
         <ProjectSection />
         <ExperienceSection />
-        <div className="relative">
+        <div className="relative z-10">
           <BlurBlob
             pathClassName="fill-amber-500/40"
-            className="max-w-[30rem] absolute -top-[40rem] -right-[15rem] rotate-45"
+            className="max-w-[30rem] absolute -top-[40rem] -right-[15rem] rotate-45 z-10"
           />
           <BlurBlob
             pathClassName="fill-rose-500/40"
-            className="max-w-[30rem] absolute -top-[35rem] -right-[15rem] -rotate-45"
+            className="max-w-[30rem] absolute -top-[35rem] -right-[15rem] -rotate-45 z-10"
           />
         </div>
+        <ContactSection />
       </main>
     </>
   );
