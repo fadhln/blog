@@ -30,6 +30,16 @@ const Home: NextPage = () => {
         <TechStackSection />
         <ProjectSection />
         <ExperienceSection />
+        <div className="relative">
+          <BlurBlob
+            pathClassName="fill-amber-500/40"
+            className="max-w-[30rem] absolute -top-[40rem] -right-[15rem] rotate-45"
+          />
+          <BlurBlob
+            pathClassName="fill-rose-500/40"
+            className="max-w-[30rem] absolute -top-[35rem] -right-[15rem] -rotate-45"
+          />
+        </div>
       </main>
     </>
   );

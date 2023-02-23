@@ -3,6 +3,7 @@ import SectionHeading from '@/components/sectionHeading';
 import React from 'react';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import ExperienceItem from './components/experienceItem';
 
@@ -48,6 +49,13 @@ const ExperienceSection = () => {
           isLast
         />
       </motion.div>
+      <div className="text-center mt-16 font-light text-sm">
+        More complete information can be seen in my{' '}
+        <Link href="#" className="font-medium underline">
+          Resume
+        </Link>
+        .
+      </div>
     </section>
   );
 };
