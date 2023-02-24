@@ -8,7 +8,8 @@ import { z } from 'zod';
 const server = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']),
   NOTION_TOKEN: z.string(),
-  NOTION_DATABASE_ID: z.string()
+  NOTION_DATABASE_ID: z.string(),
+  NOTION_INBOX_ID: z.string(),
 });
 
 /**
@@ -28,8 +29,8 @@ const client = z.object({
 const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
   NOTION_TOKEN: process.env.NOTION_TOKEN,
-  NOTION_DATABASE_ID: process.env.NOTION_DATABASE_ID
-  // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+  NOTION_DATABASE_ID: process.env.NOTION_DATABASE_ID,
+  NOTION_INBOX_ID: process.env.NOTION_INBOX_ID,
 };
 
 // Don't touch the part below
