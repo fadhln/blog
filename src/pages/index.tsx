@@ -7,10 +7,23 @@ import ExperienceSection from '@/sections/home/Experience/ExperienceSection';
 import ProjectSection from '@/sections/home/Project/ProjectSection';
 import TechStackSection from '@/sections/home/TechStack/TechStackSection';
 
+// import { api } from '@/utils/api';
 import { type NextPage } from 'next';
 import Head from 'next/head';
 
+// import { useEffect } from 'react';
+
 const Home: NextPage = () => {
+  // const blogPosts = api.blog.getAllPost.useQuery({
+  //   status: "Published",
+  // })
+
+  // useEffect(() => {
+  //   if(blogPosts.isSuccess) {
+  //     console.log(blogPosts.data)
+  //   }
+  // }, [blogPosts])
+
   return (
     <>
       <Head>

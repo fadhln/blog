@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { z } from 'zod';
 
 /**
@@ -6,6 +7,8 @@ import { z } from 'zod';
  */
 const server = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']),
+  NOTION_TOKEN: z.string(),
+  NOTION_DATABASE_ID: z.string()
 });
 
 /**
@@ -24,6 +27,8 @@ const client = z.object({
  */
 const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
+  NOTION_TOKEN: process.env.NOTION_TOKEN,
+  NOTION_DATABASE_ID: process.env.NOTION_DATABASE_ID
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 };
 
