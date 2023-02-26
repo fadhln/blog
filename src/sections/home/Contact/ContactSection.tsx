@@ -2,14 +2,62 @@ import Button from '@/components/button';
 import SectionHeading from '@/components/sectionHeading';
 import TextArea from '@/components/textArea';
 import TextInput from '@/components/textInput';
+import { api } from '@/utils/api';
+import validateEmail from '@/utils/validateEmail';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { HiPaperAirplane } from 'react-icons/hi2';
 
 import { motion } from 'framer-motion';
+import { toast } from 'sonner';
 
 const ContactSection = () => {
+  const postMessage = api.message.postMessage.useMutation({
+    retry: false,
+  });
+
+  const [name, setName] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [message, setMessage] = useState<string>();
+
+  const handleSubmit = () => {
+    if (!name) {
+      toast.error('Name is required');
+      return;
+    }
+
+    if (!email) {
+      toast.error('Email is required');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error('Email is invalid');
+      return;
+    }
+
+    if (!message) {
+      toast.error('Message is required');
+      return;
+    }
+
+    toast.promise(
+      async () => {
+        await postMessage.mutateAsync({
+          email,
+          name,
+          message,
+        });
+      },
+      {
+        loading: 'Loading',
+        success: 'Success',
+        error: 'Error',
+      }
+    );
+  };
+
   return (
     <section className="mx-auto container mt-56 px-3 relative z-20">
       <SectionHeading name={'contact'} />
@@ -69,24 +117,34 @@ const ContactSection = () => {
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-3">
-            <p className="text-lg mb-3">Send a Message</p>
+            <p className="text-lg mb-3">Leave Me a Message</p>
             <hr className="bg-warm-gray-300 dark:bg-warm-gray-700 h-px border-0" />
             <div className="grid sm:grid-cols-2 gap-3">
-              <TextInput placeholder="John Doe" name="name" label="Full Name" />
+              <TextInput
+                placeholder="John Doe"
+                name="name"
+                label="Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
               <TextInput
                 placeholder="john@doe.com"
                 name="email"
                 label="E-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <TextArea
               placeholder="I have an opportunity for you!"
               name="message"
               label="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
             <div className="flex justify-end">
               <div>
-                <Button>
+                <Button onClick={handleSubmit} disabled={postMessage.isLoading}>
                   Send <HiPaperAirplane />
                 </Button>
               </div>
