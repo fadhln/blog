@@ -9,7 +9,7 @@ import ProjectCard from './components/projectCard';
 
 const ProjectSection = () => {
   return (
-    <section className="mx-auto container mt-56 px-3 relative">
+    <section className="mx-auto container mt-56 px-3 relative z-20">
       <SectionHeading name={'project'} />
       <motion.div
         className="grid grid-cols-2 gap-2 md:gap-6 mt-24"

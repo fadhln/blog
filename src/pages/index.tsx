@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Fadhlan Personal Page</title>
+        <title>Fadhlan - Home</title>
         {/* TODO: change description */}
         <meta name="description" content="Made by Muhammad Fadhlan" />
       </Head>

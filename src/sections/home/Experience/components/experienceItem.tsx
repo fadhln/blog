@@ -15,7 +15,7 @@ const ExperienceItem: React.FC<{
   return (
     <motion.div className="flex gap-4">
       <div className="flex items-center flex-col relative">
-        <div className="h-[1.75rem] aspect-square rounded-full z-20 bg-warm-gray-50 flex items-center justify-center dark:bg-warm-gray-900">
+        <div className="h-[1.75rem] aspect-square rounded-full z-20 bg-warm-gray-100 flex items-center justify-center dark:bg-[#222120]">
           <div className="h-[1.25rem] rounded-full border aspect-square mt-0.5 border-warm-gray-400 dark:border-warm-gray-600" />
         </div>
         {!isLast && (

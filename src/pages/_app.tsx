@@ -39,6 +39,31 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           }}
         />
         <Component {...pageProps} />
+        <svg
+          id="texture"
+          className="z-0 brightness-125 dark:brightness-[0.2]"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            zIndex: '$max',
+            width: '100%',
+            height: 'calc(100vh + 200px)',
+            pointerEvents: 'none',
+            transform: 'translateY(0)',
+          }}
+        >
+          <filter id="noise">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency=".8"
+              numOctaves="4"
+              stitchTiles="stitch"
+            ></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noise)"></rect>
+        </svg>
       </div>
     </div>
   );
