@@ -85,12 +85,12 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <article className="mt-16">
           <ReactMarkdown
             className={cx(
-              'prose prose-headings:font-semibold prose-headings:text-warm-gray-50',
-              'prose-p:text-warm-gray-100 prose-a:text-rose-500 prose-code:text-warm-gray-300',
-              'prose-strong:text-warm-gray-50',
-              'prose-ul:text-warm-gray-200 prose-ol:text-warm-gray-200',
-              'prose-hr:border-warm-gray-500',
-              'prose-pre:bg-warm-gray-900'
+              'prose prose-headings:font-semibold prose-headings:text-warm-gray-900 dark:prose-headings:text-warm-gray-50',
+              'prose-p:text-warm-gray-800 dark:prose-p:text-warm-gray-100 prose-a:text-rose-500 prose-code:text-warm-gray-600 dark:prose-code:text-warm-gray-300',
+              'prose-strong:text-warm-gray-900 dark:prose-strong:text-warm-gray-50',
+              'prose-ul:text-warm-gray-700 prose-ol:text-warm-gray-700 dark:prose-ul:text-warm-gray-200 dark:prose-ol:text-warm-gray-200',
+              'prose-hr:border-warm-gray-500 prose-img:rounded-lg',
+              'prose-pre:bg-warm-gray-50 prose-pre:border prose-pre:shadow-sm dark:prose-pre:border-warm-gray-800 dark:prose-pre:bg-warm-gray-900'
             )}
           >
             {post.data.content}
