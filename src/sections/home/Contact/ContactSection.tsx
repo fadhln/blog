@@ -6,7 +6,7 @@ import { api } from '@/utils/api';
 import validateEmail from '@/utils/validateEmail';
 
 import React, { useState } from 'react';
-import { FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { HiPaperAirplane } from 'react-icons/hi2';
 
 import { motion } from 'framer-motion';
@@ -95,24 +95,27 @@ const ContactSection = () => {
             <div className="flex mt-2 gap-2">
               <a
                 className="group text-xl h-[2.25rem] flex items-center justify-center aspect-square p-1 rounded-full border-warm-gray-200 dark:border-warm-gray-700 border"
-                href="#"
+                href="https://github.com/fadhln"
+                rel="noreferrer"
                 target={'_blank'}
               >
                 <FaGithub className="opacity-50 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
                 className="group text-xl h-[2.25rem] flex items-center justify-center aspect-square p-1 rounded-full border-warm-gray-200 dark:border-warm-gray-700 border"
-                href="#"
+                href="https://twitter.com/m_fadhln"
                 target={'_blank'}
+                rel="noreferrer"
               >
                 <FaTwitter className="opacity-50 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
                 className="group text-xl h-[2.25rem] flex items-center justify-center aspect-square p-1 rounded-full border-warm-gray-200 dark:border-warm-gray-700 border"
-                href="#"
+                href="https://linkedin.com/in/fadhln"
                 target={'_blank'}
+                rel="noreferrer"
               >
-                <FaInstagram className="opacity-50 group-hover:opacity-100 transition-opacity" />
+                <FaLinkedinIn className="opacity-50 group-hover:opacity-100 transition-opacity" />
               </a>
             </div>
           </div>

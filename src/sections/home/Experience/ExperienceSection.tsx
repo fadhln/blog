@@ -51,7 +51,11 @@ const ExperienceSection = () => {
       </motion.div>
       <div className="text-center mt-16 font-light text-sm">
         More complete information can be seen in my{' '}
-        <Link href="#" className="font-medium underline">
+        <Link
+          href="https://drive.google.com/file/d/1lbOeWQ-blvLejchyVffinvH_5_K6Bymj/view?usp=sharing"
+          target={'_blank'}
+          className="font-medium underline"
+        >
           Resume
         </Link>
         .
