@@ -5,7 +5,7 @@ const navbarData = [
   },
   {
     content: '.resume()',
-    href: '/resume',
+    href: 'https://drive.google.com/file/d/1lbOeWQ-blvLejchyVffinvH_5_K6Bymj/view?usp=sharing',
   },
   {
     content: '.contact()',
