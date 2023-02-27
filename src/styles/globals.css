@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+
+  .noise {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  @keyframes sspin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .animate-sspin {
+    animation: sspin 1s linear infinite;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f43f5e;
+  border: 0px none;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f43f5e;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #be123c;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
