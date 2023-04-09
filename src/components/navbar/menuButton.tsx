@@ -21,7 +21,7 @@ const MenuButton = () => {
             <>
               <Dialog.Overlay className="fixed inset-0" asChild>
                 <motion.div
-                  className="bg-warm-gray-800 backdrop-blur-sm w-full h-full bg-opacity-50"
+                  className="bg-warm-gray-800 backdrop-blur-sm w-full h-full bg-opacity-50 z-20"
                   initial={{
                     opacity: 0,
                     x: 100,
@@ -35,7 +35,7 @@ const MenuButton = () => {
                   }}
                 />
               </Dialog.Overlay>
-              <Dialog.Content className="fixed pr-3 right-0 top-[50%] -translate-y-1/2 text-warm-gray-50">
+              <Dialog.Content className="fixed pr-3 right-0 top-[50%] z-30 -translate-y-1/2 text-warm-gray-50">
                 <motion.ul
                   animate={open ? 'open' : 'closed'}
                   variants={{
