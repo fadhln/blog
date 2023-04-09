@@ -51,6 +51,7 @@ const getOnePostDetail = publicProcedure
     if (isPageObjectResponse(notionRes)) {
       const titleProps = notionRes.properties['Title'];
       const tagProps = notionRes.properties['Tags'];
+      const descProps = notionRes.properties['Description'];
 
       const res: BlogPost = {
         id: notionRes.id,
@@ -60,6 +61,10 @@ const getOnePostDetail = publicProcedure
           titleProps?.type === 'title'
             ? titleProps.title[0]?.plain_text ?? ''
             : '',
+        description:
+          descProps?.type === 'rich_text'
+            ? descProps.rich_text[0]?.plain_text ?? 'Made by Muhammad Fadhlan'
+            : 'Made by Muhammad Fadhlan',
         tags:
           tagProps?.type === 'multi_select'
             ? tagProps.multi_select.map((t) => ({

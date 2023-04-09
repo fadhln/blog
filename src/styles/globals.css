@@ -55,3 +55,11 @@
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+::-moz-selection { /* Code for Firefox */
+  @apply bg-warm-gray-500/50
+}
+
+::selection {
+  @apply bg-warm-gray-500/50
+}

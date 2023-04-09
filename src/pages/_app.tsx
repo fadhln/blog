@@ -1,4 +1,4 @@
-import themeAtom, { Theme } from '@/atom/themeAtom';
+import themeAtom from '@/atom/themeAtom';
 import '@/styles/globals.css';
 import { api } from '@/utils/api';
 import cx from '@/utils/cx';
@@ -11,7 +11,7 @@ import { Toaster } from 'sonner';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   const [theme] = useAtom(themeAtom);
-  const [defaultTheme, setDefaultTheme] = useState<'light' | 'dark'>('light');
+  const [defaultTheme, setDefaultTheme] = useState<'light' | 'dark'>('dark');
   const handleSetTheme = (e: MediaQueryListEvent) => {
     setDefaultTheme(e.matches ? 'dark' : 'light');
   };

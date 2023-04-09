@@ -40,7 +40,7 @@ const Blog: NextPage = () => {
           attempt to do public learning.
         </p>
         <div className="mt-8 flex flex-col gap-4">
-          {blogPosts.data ? (
+          {blogPosts.isSuccess ? (
             blogPosts.data.results.map((result) => {
               if (isPageObjectResponse(result)) {
                 const titleProps = result.properties['Title'];
@@ -94,7 +94,24 @@ const Blog: NextPage = () => {
               }
             })
           ) : (
-            <></>
+            <>
+              <div className="flex flex-col gap-2">
+                <div className="bg-warm-gray-500/30 animate-pulse h-6 w-[80%] rounded-sm" />
+                <div className="bg-warm-gray-500/30 animate-pulse h-3 w-[50%] rounded-sm" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="bg-warm-gray-500/30 animate-pulse h-6 w-[80%] rounded-sm" />
+                <div className="bg-warm-gray-500/30 animate-pulse h-3 w-[50%] rounded-sm" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="bg-warm-gray-500/30 animate-pulse h-6 w-[80%] rounded-sm" />
+                <div className="bg-warm-gray-500/30 animate-pulse h-3 w-[50%] rounded-sm" />
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="bg-warm-gray-500/30 animate-pulse h-6 w-[80%] rounded-sm" />
+                <div className="bg-warm-gray-500/30 animate-pulse h-3 w-[50%] rounded-sm" />
+              </div>
+            </>
           )}
         </div>
       </main>
